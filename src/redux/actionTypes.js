@@ -1,0 +1,3 @@
+// LIST
+export const GET_GISTS_ALL = 'GET_GISTS_ALL';
+export const GET_GISTS_ALL_ERROR = 'GET_GISTS_ALL_ERROR';
