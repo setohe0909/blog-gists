@@ -1,4 +1,3 @@
-
 const initialListState = {
   allGists: [],
   error: null
