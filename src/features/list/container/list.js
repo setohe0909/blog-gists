@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
+import SearchGists from '../componets/search';
+
 import { 
   getAllGists, 
   getGistsByUser } from '../action';
@@ -31,19 +33,13 @@ class ListContainer extends Component {
     const { ListR } = this.props;
     return (
       <div>
-        <div className="row">
-          <div className="col-4 offset-2">
-            <button type="button" className="btn btn-lg" onClick={(e) => this.getAll(e)}>
-              Show all gists
-            </button>
-          </div>
-          <div className="col-4 pull-right">
-            <input type="text" onKeyUp={(e) => this.getByUser(e)} className="form-control margin-t-6" placeholder="Search by user" />
-          </div>
-        </div>
+       <SearchGists 
+        getAll={this.getAll}
+        getByUser={this.getByUser}
+       />
         <br />
         <ul className="cards">
-            { ListR.allGists.length > 0 &&
+            { ListR.allGists.length > 0 ?
               ListR.allGists.map((item, index) => {
                 return (
                   <li key={index} className="cards__item">
@@ -78,6 +74,8 @@ class ListContainer extends Component {
                     </div>
                 </li>);
               })
+              :
+              <strong className="text-center">It's empty :(</strong>
             }
         </ul>
       </div>
