@@ -1,3 +1,17 @@
+.title-list {
+  margin-top: 10px;
+  font-size: 3rem;
+  display: inline-block;
+  
+  div{
+    position: relative;
+    float: left;
+  }
+  div:first-child{
+    color: #3498db;
+    margin-right: 1rem;
+  }
+}
 
 .cards {
   display: flex;
@@ -74,7 +88,6 @@
   background-image: url(https://unsplash.it/800/600?image=82);
 }
 
-
 .card__title {
   color: #696969;
   font-size: 1.25rem;
@@ -89,3 +102,19 @@
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
+
+.empty-container {
+  max-width: 450px;
+  margin: 0 auto;
+  .big-emoticon {
+    font-size: 75px;
+    color: #666;
+    transform: rotate(45deg);
+    margin-top: 100px;
+    margin-bottom: -100px;
+  }
+  h1 {
+    margin-top: 60px;
+  }
+}
+  

@@ -28,15 +28,9 @@ class DetailsContainer extends Component {
               { 
                 detailsR &&
                   <div className="post-card">
-                    <div className="post-card__nav">
-                      <ul>
-                        <li>
-                          <button type="button" className="btn arrow-position" onClick={(e) => this.goBack(e)} >
-                            <i className="fa fa-chevron-circle-left"></i>wedweer
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                    <button type="button" className="btn arrow-position" onClick={(e) => this.goBack(e)} >
+                      Press to go back!
+                    </button>
           
                     <div className="post-card__content">
                       <div className="post-card__info">

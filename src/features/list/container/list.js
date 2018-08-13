@@ -33,6 +33,10 @@ class ListContainer extends Component {
     const { ListR } = this.props;
     return (
       <div>
+        <h1 className="title-list">
+          <div className="animated fadeInLeft">Blog</div>
+          <div className="animated fadeInRight">Gists!</div>
+        </h1>
        <SearchGists 
         getAll={this.getAll}
         getByUser={this.getByUser}
@@ -75,7 +79,12 @@ class ListContainer extends Component {
                 </li>);
               })
               :
-              <strong className="text-center">It's empty :(</strong>
+              <div className="empty-container">
+                <div className='big-emoticon'>:(</div>
+                  <h1>
+                    It's empty!
+                  </h1>
+              </div>
             }
         </ul>
       </div>
