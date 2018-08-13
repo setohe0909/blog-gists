@@ -30,7 +30,7 @@ class ListContainer extends Component {
   render() {
     const { ListR } = this.props;
     return (
-      <div className="container">
+      <div className="">
         <div className="row">
           <div className="col-4 offset-2">
             <button type="button" className="btn btn-lg" onClick={(e) => this.getAll(e)}>
@@ -50,22 +50,6 @@ class ListContainer extends Component {
                   return (
                     <div key={index} className="card">
                       <ul className="list-group list-group-flush">
-                        <li>
-                          <div className="row">
-                            <div className="col-2">
-                              <h3>Avatar</h3>
-                            </div>
-                            <div className="col-4">
-                              <h3>Description</h3>
-                            </div>
-                            <div className="col-3">
-                              <h3>Last Update</h3>
-                            </div>
-                            <div className="col-2">
-                              <h3>Comments</h3>
-                            </div>
-                          </div>
-                        </li>
                         <li className="list-group-item">
                           <div className="row">
                             <div className="col-2">
@@ -106,7 +90,21 @@ class ListContainer extends Component {
             }
           </div>
         </div>
+
+        <ul className="cards">
+          <li className="cards__item">
+              <div className="card">
+                <div className="card__image card__image--fence"></div>
+                <div className="card__content">
+                    <div className="card__title">Flex</div>
+                    <p className="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+                    <button className="btn btn--block card__btn">Button</button>
+                </div>
+              </div>
+          </li>
+        </ul>
       </div>
+      
     );
   }
 }

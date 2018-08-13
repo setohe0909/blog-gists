@@ -6,10 +6,10 @@ import {
 import * as routes from './constants/routes';
 
 /* Components */
-import ListContainer from './features/list/components/list';
+import ListContainer from './features/list/container/list';
 import DetailsContainer from './features/details/components/details';
 
-import './App.scss';
+import './assets/App.scss';
 
 const App = () =>
   (<Router>
