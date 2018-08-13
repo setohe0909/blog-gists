@@ -22,57 +22,56 @@ class DetailsContainer extends Component {
 
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="container">
+        <button type="button" className="btn arrow-position" onClick={(e) => this.goBack(e)} >
+          Press to go back!
+        </button>
+        { 
+          detailsR &&
+            <div className="card-details">
               { 
-                detailsR &&
-                  <div className="post-card">
-                    <button type="button" className="btn arrow-position" onClick={(e) => this.goBack(e)} >
-                      Press to go back!
-                    </button>
-          
-                    <div className="post-card__content">
-                      <div className="post-card__info">
-                        { 
-                          detailsR.details.owner &&
-                          <img className="pull-right" src={detailsR.details.owner.avatar_url} alt=""/>
-                        }
-                        <h1 v-if="gist.title"> { detailsR.details.title } </h1>
-                        <p> { detailsR.details.description } </p>
-                        <a href={detailsR.details.html_url} >
-                          Open Gist
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="post-card__img" id="post-card__img">
-                      <div className="post-card__social">
-                        <ul>
-                          <li>
-                            <i className="ion ion-chatbox"></i>
-                            <span>
-                              Comments &nbsp;
-                              { detailsR.details.comments }
-                            </span>
-                          </li>
-                          <li>
-                            <i className="ion ion-heart"></i>
-                            { detailsR.details.forks && 
-                              <span>
-                                Forks &nbsp;
-                                { detailsR.details.forks.length }
-                              </span>
-                            }
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                detailsR.details.owner &&
+                  <div className="card-header">
+                    <h1 className="card-title">
+                      {detailsR.details.owner.login}
+                    </h1>
+                    <p className="card-subtitle">
+                      {detailsR.details.owner.html_url}
+                    </p>
+                    <img title="profile" alt="img" src={detailsR.details.owner.avatar_url} />
                   </div>
               }
-            </div>
-          </div>
-        </div>
+              <div className="card-body">
+                <p>
+                  {detailsR.details.description} 
+                </p>
+                <ul>
+                  <li>
+                    <i className="ion ion-chatbox"></i>
+                    <span>
+                      Comments &nbsp;
+                      { detailsR.details.comments }
+                    </span>
+                  </li>
+                  <li>
+                    <i className="ion ion-heart"></i>
+                    { detailsR.details.forks && 
+                      <span>
+                        Forks &nbsp;
+                        { detailsR.details.forks.length }
+                      </span>
+                    }
+                  </li>
+                </ul>
+              </div>
+              <div className="card-footer">
+                <span className="footer-note">
+                  <a href={detailsR.details.html_url} >
+                    Open Gist
+                  </a>
+                </span>
+              </div>
+            </div>  
+        }
       </div>
     );
   }

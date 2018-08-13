@@ -1,0 +1,61 @@
+.container {
+  margin: 15px 0; 
+}
+.card-details {
+ background: #fff;
+ font-family: Arial;
+ font-size: 15px;
+ line-height: 1.26;
+ width: 500px;
+ height: 300px;
+ margin: 0 auto;
+ box-shadow: 0px 1px 6px 1px #ccc;             
+ color: #666;
+ border-radius: 10px;
+ 
+ .card-header {
+   padding: 30px 0 10px;
+   background-color: #55aced;
+   border-radius: 10px 10px 0 0;
+   color: #fff;
+   position: relative;
+   text-align: center;
+   
+   img {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     position: absolute;
+     top: 30px;
+     left: 20px;
+   }
+   
+   .card-title {
+     font-size: 35px;
+   }
+ }
+ .card-body {
+   height: calc(100% - 190px);
+   padding: 35px 20px 10px;
+ }
+ .card-footer {
+   padding: 10px 20px 10px;
+   border-top: 1px solid #ccc;
+   font-size: 18px;
+   a {
+     color: #55aced;
+     text-decoration: none;
+     padding: 0 5px 0 0;
+     
+     &.github:hover {
+       color: #24292e;
+     }
+     &.twitter:hover {
+       color: #1da1f2;
+     }
+     &.facebook:hover {
+       color: #3b5998;
+     }
+   }
+ }
+}
