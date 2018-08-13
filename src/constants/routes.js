@@ -1,2 +1,2 @@
-export const LOG_IN = '/login';
 export const MAIN = '/';
+export const POST_DETAILS = '/details/:postId';
